@@ -1,3 +1,4 @@
+package week1;
 import java.util.Scanner;
 
 //Shift + Ctrl + F  code format
