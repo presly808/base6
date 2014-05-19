@@ -6,7 +6,7 @@ public class TestMethods {
 
 	public static void main(String[] args) {
 
-		int[] arr = ArrayHelper.genRanMas(20);
+		int[] arr = ArrayHelper.genRanM(20);
 		ArrayHelper.printArr(arr);
 		String s = "line1";
 		

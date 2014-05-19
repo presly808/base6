@@ -1,5 +1,7 @@
 package helpers;
 
+import java.util.Scanner;
+
 public class ArrayHelper {
 
 	public static void printArr(int[] mas) {
@@ -9,7 +11,7 @@ public class ArrayHelper {
 		System.out.println();
 	}
 	
-	public static int[] genRanMas(int size){
+	public static int[] genRanM(int size){
 		int[] mas = new int[size];
 		for(int i = 0; i < mas.length; i++){
 			mas[i] = (int)(Math.random() * 100);
@@ -33,6 +35,10 @@ public class ArrayHelper {
 		for(int i = 0; i < mas.length; i++){
 			int ran = (int)(Math.random() * 100);
 			
+			mas[i] = i % 2 == 0 ? 
+						(ran % 2 == 0 ? ran : ran +1 ) : 
+							(ran % 2 == 1 ? ran : ran + 1); 
+			
 			if(i % 2 == 0){
 				if(ran % 2 == 0){
 					mas[i] = ran;
@@ -48,6 +54,22 @@ public class ArrayHelper {
 			}
 				
 		}
+		return mas;
+		
+	}
+	
+	public static int[] inputMas(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("input array size");
+		int size = sc.nextInt();
+		
+		int[] mas = new int[size];
+		
+		for(int i = 0; i < mas.length; i++){
+			System.out.println("input " + (i+1) + " element");
+			mas[i] = sc.nextInt();
+		}
+		
 		return mas;
 		
 	}
